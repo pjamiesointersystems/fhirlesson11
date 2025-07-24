@@ -1,0 +1,21 @@
+{
+    "resourceType": "Patient",
+    "id": "example",
+    "name": [
+      {
+        "use": "official",
+        "family": "Doe",
+        "given": ["Jane"]
+      }
+    ],
+    "gender": "female",
+    "birthDate": "1985-06-15",
+    "telecom": [
+      {
+        "system": "phone",
+        "value": "555-123-4567",
+        "use": "home"
+      }
+    ]
+  }
+  
