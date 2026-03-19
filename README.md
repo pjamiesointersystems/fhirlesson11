@@ -17,11 +17,49 @@ By the end of this lesson, you will be able to:
 
 ## 🔧 Environment Setup
 
+
 To isolate your dependencies and avoid package conflicts, create a virtual environment:
+
+# We are moving to using the uv package manager for python virtual environments and installation of packages
+# on mac os run the following command at the terminal
+
+```
+# download and install uv
+curl -Ls https://astral.sh/uv/install.sh | sh
+
+```
+# verify installation
+uv --version
+
+# for windows installation of uv teh recommended way is to use PowerShell
+```
+irm https://astral.sh/uv/install.ps1 | iex
+
+# if script execution is blocked
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# then verify installation
+uv --version
+
+# once installed, you can immediately use uv
+uv venv
+
+# activate it on macOS/Linux
+
+source .venv/bin/activate
+
+# on windows
+.venv\Scripts\activate
+
+#if command not found restart the terminal
+
+
 
 ```bash
 # Create the virtual environment
 python3 -m venv myenv
+
+
 
 # Activate it (Windows)
 myenv\Scripts\activate

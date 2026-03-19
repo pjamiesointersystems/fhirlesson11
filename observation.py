@@ -217,22 +217,22 @@ def post_fhir_observation(observation):
 
     return response
 
-# class ExtendedObservation(Observation):
-#     def __init__(self, **data):
-#         # Initialize the base Observation using the provided data.
-#         super().__init__(**data)
+class ExtendedObservation(Observation):
+    def __init__(self, **data):
+        # Initialize the base Observation using the provided data.
+        super().__init__(**data)
         
-#         # Create the custom reporter extension.
-#         reporter_extension = Extension(
-#             url="http://iscfhir.com/reporter",
-#             valueString="pjamieso"
-#         )
+        # Create the custom reporter extension.
+        reporter_extension = Extension(
+            url="http://iscfhir.com/reporter",
+            valueString="pjamieso"
+        )
         
-#         # Add the extension, ensuring any existing extensions are preserved.
-#         if self.extension is None:
-#             self.extension = [reporter_extension]
-#         else:
-#             self.extension.append(reporter_extension)
+        # Add the extension, ensuring any existing extensions are preserved.
+        if self.extension is None:
+            self.extension = [reporter_extension]
+        else:
+            self.extension.append(reporter_extension)
 
 
 
@@ -249,6 +249,6 @@ if __name__ == "__main__":
     #     subject={"reference": "Patient/123"}
     # )
     
-    # # When printing, the custom extension will be present in the JSON output.
+    # When printing, the custom extension will be present in the JSON output.
     # print(ext_obs.json(indent=2))
 
